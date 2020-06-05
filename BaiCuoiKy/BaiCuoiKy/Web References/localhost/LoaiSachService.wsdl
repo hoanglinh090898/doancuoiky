@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getAllLoaiSach">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllLoaiSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllLoaiSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertLoaiSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="maloai" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tenloai" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertLoaiSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertLoaiSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateLoaiSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="maloai" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tenloai" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateLoaiSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateLoaiSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteLoaiSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="maloai" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteLoaiSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteLoaiSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllSach">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_loai" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tensach" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="soluong" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dongia" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="tinhtrang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_loai" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tensach" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="soluong" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dongia" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="tinhtrang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loadSachByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loadSachByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loadSachByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertDocGia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CMND" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diachi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sdt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertDocGiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertDocGiaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateDocGia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CMND" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diachi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sdt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateDocGiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateDocGiaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteDocGia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteDocGiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteDocGiaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllDocGia">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllDocGiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllDocGiaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDocGiaByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDocGiaByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDocGiaByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NhapSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ngaynhap" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ghichu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NhapSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NhapSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChiTietNhapSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_sach" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="soluong" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dongia" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChiTietNhapSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChiTietNhapSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MuonSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ngaymuon" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ngaytra" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_docgia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MuonSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MuonSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChiTietMuonSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_sach" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="soluong" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="giatien" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChiTietMuonSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChiTietMuonSachResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getAllLoaiSachSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllLoaiSach" />
+  </wsdl:message>
+  <wsdl:message name="getAllLoaiSachSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllLoaiSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertLoaiSachSoapIn">
+    <wsdl:part name="parameters" element="tns:insertLoaiSach" />
+  </wsdl:message>
+  <wsdl:message name="insertLoaiSachSoapOut">
+    <wsdl:part name="parameters" element="tns:insertLoaiSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateLoaiSachSoapIn">
+    <wsdl:part name="parameters" element="tns:updateLoaiSach" />
+  </wsdl:message>
+  <wsdl:message name="updateLoaiSachSoapOut">
+    <wsdl:part name="parameters" element="tns:updateLoaiSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteLoaiSachSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteLoaiSach" />
+  </wsdl:message>
+  <wsdl:message name="deleteLoaiSachSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteLoaiSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllSachSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllSach" />
+  </wsdl:message>
+  <wsdl:message name="getAllSachSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertSachSoapIn">
+    <wsdl:part name="parameters" element="tns:insertSach" />
+  </wsdl:message>
+  <wsdl:message name="insertSachSoapOut">
+    <wsdl:part name="parameters" element="tns:insertSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateSachSoapIn">
+    <wsdl:part name="parameters" element="tns:updateSach" />
+  </wsdl:message>
+  <wsdl:message name="updateSachSoapOut">
+    <wsdl:part name="parameters" element="tns:updateSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteSachSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteSach" />
+  </wsdl:message>
+  <wsdl:message name="deleteSachSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="loadSachByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:loadSachByID" />
+  </wsdl:message>
+  <wsdl:message name="loadSachByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:loadSachByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertDocGiaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertDocGia" />
+  </wsdl:message>
+  <wsdl:message name="insertDocGiaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertDocGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateDocGiaSoapIn">
+    <wsdl:part name="parameters" element="tns:updateDocGia" />
+  </wsdl:message>
+  <wsdl:message name="updateDocGiaSoapOut">
+    <wsdl:part name="parameters" element="tns:updateDocGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteDocGiaSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteDocGia" />
+  </wsdl:message>
+  <wsdl:message name="deleteDocGiaSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteDocGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllDocGiaSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllDocGia" />
+  </wsdl:message>
+  <wsdl:message name="getAllDocGiaSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllDocGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDocGiaByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getDocGiaByID" />
+  </wsdl:message>
+  <wsdl:message name="getDocGiaByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getDocGiaByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="NhapSachSoapIn">
+    <wsdl:part name="parameters" element="tns:NhapSach" />
+  </wsdl:message>
+  <wsdl:message name="NhapSachSoapOut">
+    <wsdl:part name="parameters" element="tns:NhapSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChiTietNhapSachSoapIn">
+    <wsdl:part name="parameters" element="tns:ChiTietNhapSach" />
+  </wsdl:message>
+  <wsdl:message name="ChiTietNhapSachSoapOut">
+    <wsdl:part name="parameters" element="tns:ChiTietNhapSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="MuonSachSoapIn">
+    <wsdl:part name="parameters" element="tns:MuonSach" />
+  </wsdl:message>
+  <wsdl:message name="MuonSachSoapOut">
+    <wsdl:part name="parameters" element="tns:MuonSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChiTietMuonSachSoapIn">
+    <wsdl:part name="parameters" element="tns:ChiTietMuonSach" />
+  </wsdl:message>
+  <wsdl:message name="ChiTietMuonSachSoapOut">
+    <wsdl:part name="parameters" element="tns:ChiTietMuonSachResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LoaiSachServiceSoap">
+    <wsdl:operation name="getAllLoaiSach">
+      <wsdl:input message="tns:getAllLoaiSachSoapIn" />
+      <wsdl:output message="tns:getAllLoaiSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertLoaiSach">
+      <wsdl:input message="tns:insertLoaiSachSoapIn" />
+      <wsdl:output message="tns:insertLoaiSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLoaiSach">
+      <wsdl:input message="tns:updateLoaiSachSoapIn" />
+      <wsdl:output message="tns:updateLoaiSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteLoaiSach">
+      <wsdl:input message="tns:deleteLoaiSachSoapIn" />
+      <wsdl:output message="tns:deleteLoaiSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllSach">
+      <wsdl:input message="tns:getAllSachSoapIn" />
+      <wsdl:output message="tns:getAllSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertSach">
+      <wsdl:input message="tns:insertSachSoapIn" />
+      <wsdl:output message="tns:insertSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateSach">
+      <wsdl:input message="tns:updateSachSoapIn" />
+      <wsdl:output message="tns:updateSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSach">
+      <wsdl:input message="tns:deleteSachSoapIn" />
+      <wsdl:output message="tns:deleteSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="loadSachByID">
+      <wsdl:input message="tns:loadSachByIDSoapIn" />
+      <wsdl:output message="tns:loadSachByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertDocGia">
+      <wsdl:input message="tns:insertDocGiaSoapIn" />
+      <wsdl:output message="tns:insertDocGiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateDocGia">
+      <wsdl:input message="tns:updateDocGiaSoapIn" />
+      <wsdl:output message="tns:updateDocGiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDocGia">
+      <wsdl:input message="tns:deleteDocGiaSoapIn" />
+      <wsdl:output message="tns:deleteDocGiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDocGia">
+      <wsdl:input message="tns:getAllDocGiaSoapIn" />
+      <wsdl:output message="tns:getAllDocGiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDocGiaByID">
+      <wsdl:input message="tns:getDocGiaByIDSoapIn" />
+      <wsdl:output message="tns:getDocGiaByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NhapSach">
+      <wsdl:input message="tns:NhapSachSoapIn" />
+      <wsdl:output message="tns:NhapSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChiTietNhapSach">
+      <wsdl:input message="tns:ChiTietNhapSachSoapIn" />
+      <wsdl:output message="tns:ChiTietNhapSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MuonSach">
+      <wsdl:input message="tns:MuonSachSoapIn" />
+      <wsdl:output message="tns:MuonSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChiTietMuonSach">
+      <wsdl:input message="tns:ChiTietMuonSachSoapIn" />
+      <wsdl:output message="tns:ChiTietMuonSachSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoaiSachServiceSoap" type="tns:LoaiSachServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllLoaiSach">
+      <soap:operation soapAction="http://tempuri.org/getAllLoaiSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLoaiSach">
+      <soap:operation soapAction="http://tempuri.org/insertLoaiSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLoaiSach">
+      <soap:operation soapAction="http://tempuri.org/updateLoaiSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLoaiSach">
+      <soap:operation soapAction="http://tempuri.org/deleteLoaiSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllSach">
+      <soap:operation soapAction="http://tempuri.org/getAllSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSach">
+      <soap:operation soapAction="http://tempuri.org/insertSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSach">
+      <soap:operation soapAction="http://tempuri.org/updateSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSach">
+      <soap:operation soapAction="http://tempuri.org/deleteSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadSachByID">
+      <soap:operation soapAction="http://tempuri.org/loadSachByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertDocGia">
+      <soap:operation soapAction="http://tempuri.org/insertDocGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateDocGia">
+      <soap:operation soapAction="http://tempuri.org/updateDocGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDocGia">
+      <soap:operation soapAction="http://tempuri.org/deleteDocGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDocGia">
+      <soap:operation soapAction="http://tempuri.org/getAllDocGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDocGiaByID">
+      <soap:operation soapAction="http://tempuri.org/getDocGiaByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NhapSach">
+      <soap:operation soapAction="http://tempuri.org/NhapSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChiTietNhapSach">
+      <soap:operation soapAction="http://tempuri.org/ChiTietNhapSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MuonSach">
+      <soap:operation soapAction="http://tempuri.org/MuonSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChiTietMuonSach">
+      <soap:operation soapAction="http://tempuri.org/ChiTietMuonSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LoaiSachServiceSoap12" type="tns:LoaiSachServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllLoaiSach">
+      <soap12:operation soapAction="http://tempuri.org/getAllLoaiSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLoaiSach">
+      <soap12:operation soapAction="http://tempuri.org/insertLoaiSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLoaiSach">
+      <soap12:operation soapAction="http://tempuri.org/updateLoaiSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLoaiSach">
+      <soap12:operation soapAction="http://tempuri.org/deleteLoaiSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllSach">
+      <soap12:operation soapAction="http://tempuri.org/getAllSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSach">
+      <soap12:operation soapAction="http://tempuri.org/insertSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSach">
+      <soap12:operation soapAction="http://tempuri.org/updateSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSach">
+      <soap12:operation soapAction="http://tempuri.org/deleteSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadSachByID">
+      <soap12:operation soapAction="http://tempuri.org/loadSachByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertDocGia">
+      <soap12:operation soapAction="http://tempuri.org/insertDocGia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateDocGia">
+      <soap12:operation soapAction="http://tempuri.org/updateDocGia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDocGia">
+      <soap12:operation soapAction="http://tempuri.org/deleteDocGia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDocGia">
+      <soap12:operation soapAction="http://tempuri.org/getAllDocGia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDocGiaByID">
+      <soap12:operation soapAction="http://tempuri.org/getDocGiaByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NhapSach">
+      <soap12:operation soapAction="http://tempuri.org/NhapSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChiTietNhapSach">
+      <soap12:operation soapAction="http://tempuri.org/ChiTietNhapSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MuonSach">
+      <soap12:operation soapAction="http://tempuri.org/MuonSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChiTietMuonSach">
+      <soap12:operation soapAction="http://tempuri.org/ChiTietMuonSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoaiSachService">
+    <wsdl:port name="LoaiSachServiceSoap" binding="tns:LoaiSachServiceSoap">
+      <soap:address location="http://localhost:54543/LoaiSachService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LoaiSachServiceSoap12" binding="tns:LoaiSachServiceSoap12">
+      <soap12:address location="http://localhost:54543/LoaiSachService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
